@@ -1,0 +1,207 @@
+:root{
+  --cfBlack: #6e00a1; /* Azul escuro */
+  --cfGrey: #3D5A80;  /* Azul acinzentado */
+  --cfGreen: #2B7A78; /* Verde azulado */
+  --cfLightBlue: #98C1D9; /* Azul claro */
+  --cfLightGrey: #E0FBFC; /* Cinza muito claro */
+  --cfRed: #1B263B; /* Azul profundo */
+  --cfPink: #1D3557; /* Azul marinho */
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  position: fixed;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  background-color: var(--cfGrey);
+  line-height: 1.2;
+  height: 10vh;
+  width: 100vw;
+  opacity: 0.95;
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+header>div{
+  display:flex;
+  align-items: center;
+  height: 90%;
+}
+
+footer{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-size: small;
+  width: 100vw;
+  padding: 12px;
+  text-align: center;
+  background-color: var(--cfGrey);
+  font-size: small;
+}
+
+main{
+  display: flex;
+  top: 10vh;
+  width: 100vw;
+  min-height: 120vh;
+  position: relative;
+  background-color: white;
+}
+
+nav{
+  background-color: white;;
+  height: 5vh;
+  width: 100vw;
+  padding: 1vh 1vw;
+  position: fixed;
+  top: 10vh;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav>ul>li {
+  display: inline;
+  margin-right: 5vw;
+}
+
+nav>ul>li>a {
+  color: var(--cfLightBlue);
+  text-decoration: solid;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+
+section{
+  background-color: white;;
+  width: 100%;
+  padding: 2vh 2vw 5vh;
+}
+
+div.desc>ul>li{
+  margin-left: 20px;
+  padding: 10px;
+}
+
+#logo{
+  height: 20vh;
+  width: auto;
+}
+
+.container{
+  min-height:100vh;
+}
+
+.mobileButtonStyle,
+.mobileIconBag{
+  background-color: var(--cfRed);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  z-index: 1;
+  border-radius:5px;
+}
+
+.modal{
+  position: fixed;
+  padding-top: 10vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0; 
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.perfectCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table, h2{ 
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vh;
+}
+
+tr, th, td{ 
+  padding: 1vh;
+  text-align: center;
+}
+
+.purchasesContainer{
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.toggler{
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+
+.total{
+  font-weight: bold;
+}
+
+input[value="Go to Checkout"]{
+  color: var(--cfLightGrey);
+  background-color: var(--cfRed);
+  border-radius: 8px;
+  font-size: 20px;
+  width: 60%; 
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+}
+
+.search-container{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 20px;
+  border: none;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: var(--cfLightBlue);
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+aside{
+  display: none;
+}

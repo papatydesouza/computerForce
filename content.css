@@ -1,0 +1,160 @@
+li>ul
+{
+  margin-left: 3vw;
+}
+
+.pageTitle
+{
+  margin-top: 0vh
+}
+
+.centerText
+{
+  margin-top: 1vh;
+  text-align: center;
+}
+.categoryCard img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+.categoryCard {
+  width: 250px; 
+  margin: 10px;
+  text-align: center; 
+  background-color: var(--cfLightGrey); 
+  border-radius: 8px; 
+  overflow: hidden; 
+}
+
+.categoryCardContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryImage
+{ 
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  border: solid var(--cfRed);
+  border-width: 3px;
+}
+
+.categoryImage>a,.categoryImage>a>img
+{
+  width: 100%;
+  height: 100%;
+}
+.categoryTitle {
+  font-size: 1.2rem; 
+  padding: 10px; 
+  color: var(--cfBlack); 
+}
+
+.inputGroup
+{
+  margin-bottom: 0.5vh;
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryCard a {
+  display: block; 
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.inputGroup>label, .inputGroup>p
+{
+  font-weight: bold;
+  flex-grow: 2;
+}
+ .inputGroup>input[type="text"]
+,.inputGroup>input[type="email"]
+,.inputGroup>input[type="password"]
+,.inputGroup>input[type="date"]
+,.inputGroup>select[type="select"]
+,.inputGroup>option[type="option"]
+{
+  flex-grow: 2;
+  font-size: 1.25rem;
+  line-height:1rem;
+  padding: 0.5rem;
+}
+
+.radioGender
+{
+  margin:1vh 0;
+  border: 1px solid var(--cfLightGrey);
+  padding:1vh;
+}
+.radioGender>label
+{
+  margin-left: 1vw;
+  margin-right: 5vw;
+}
+
+.registrationForm
+{
+  background-color: #d0e7ff;
+  color: #333; 
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.registrationForm input[type="button"], .registrationForm input[type="submit"]
+{
+  height: 2rem;
+  border: 0;
+  font-size: 1.5rem;
+  color: var(--cfLightGrey);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registrationForm input[type="button"]
+{
+  margin-top: 5px;
+  margin-bottom: 1vh;
+  background-color: darkgrey;
+}
+
+.registrationForm input[type="submit"]
+{
+  margin-bottom: 1vh;
+  background-color: maroon;
+}
+
+@media(min-width: 600px) and (min-height: 441px){
+  
+  .categoryCardContainer{
+    flex-direction: row;
+    flex-flow: wrap;
+    margin-bottom: 20px;
+  }
+
+  .purchasesContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.container {
+  flex: 1; 
+}
+
+footer {
+  margin-top: auto; 
+}
+
+}

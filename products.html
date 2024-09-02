@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c0e1ac414c.js" crossorigin="anonymous"></script>
+    <script src="js/template.js" defer></script>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/hamburgerMenu.css">
+    <link rel="stylesheet" href="css/iconBagMenu.css">
+    <link rel="stylesheet" href="css/content.css">
+    <title>Computer Force | Products</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="mobileMenuContainer">
+                <input type="checkbox" class="toggler" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <label for="mobileMenuToggle" class="mobileButtonStyle hamburger perfectCenter">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
+                <div class="modal mobileMenu">
+                    <div class="search-container">
+                        <form>
+                            <input type="text" placeholder="Search" name="search" aria-label="Search products">
+                            <button type="submit"><i class="fa fa-search" aria-label="Search button"></i></button>
+                        </form>
+                    </div>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="index.html">
+                <img id="logo" src="images/logo.png" alt="Company Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="searchDesktopContainer">
+                    <form>
+                        <input type="text" placeholder="Search..." name="search" aria-label="Search products">
+                        <button type="submit"><i class="fa fa-search" aria-label="Search button"></i></button>
+                    </form>
+                </div>
+            </nav>
+            <div class="mobileMenuContainer">
+                <input type="checkbox" class="toggler" id="cartMenuToggle" aria-label="Toggle cart menu">
+                <label for="cartMenuToggle" class="mobileButtonStyle iconBag perfectCenter"></label>
+                <div class="modal mobileMenu">
+                    <h2 class="purchasesContainer">PURCHASES</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th>PRICE (AUD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Test Item 1</td>
+                                <td>$1,000</td>
+                            </tr>
+                            <tr>
+                                <td>Test Item 2</td>
+                                <td>$500</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total">
+                                <th>TOTAL</th>
+                                <th>$1,500</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <input type="submit" name="checkout" value="Go to Checkout" aria-label="Go to checkout">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <br><br>
+                <h1 class="pageTitle centerText">Products We Sell</h1>
+                <p class="centerText">Computer Force sells products in the following categories:</p>
+                <div class="categoryCardContainer">
+                    <div class="categoryCard">
+                        <a href="#">
+                            <img src="images/productCategories/audio.jpg" alt="Audio">
+                            <h2 class="categoryTitle">Audio</h2>
+                        </a>
+                    </div>
+                    <div class="categoryCard">
+                        <a href="#">
+                            <img src="images/productCategories/computers.jpg" alt="Computers">
+                            <h2 class="categoryTitle perfectCenter">Computers</h2>
+                        </a>
+                    </div>
+                    <div class="categoryCard">
+                        <a href="#">
+                            <img src="images/productCategories/graphicCards.jpg" alt="Graphic Cards">
+                            <h2 class="categoryTitle perfectCenter">Graphic Cards</h2>
+                        </a>
+                    </div>
+                    <div class="categoryCard">
+                        <a href="#">
+                            <img src="images/productCategories/keyboardMice.jpg" alt="Keyboard & Mice">
+                            <h2 class="categoryTitle perfectCenter">Keyboard & Mice</h2>
+                        </a>
+                    </div>
+                    <div class="categoryCard">
+                        <a href="#">
+                            <img src="images/productCategories/laptops.jpg" alt="Laptops">
+                            <h2 class="categoryTitle perfectCenter">Laptops</h2>
+                        </a>
+                    </div>
+                    <div class="categoryCard">
+                        <a href="#">
+                            <img src="images/productCategories/monitors.jpg" alt="Monitors">
+                            <h2 class="categoryTitle perfectCenter">Monitors</h2>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>2024 &copy; Patricia Souza @papatydesouza | All rights reserved</p>
+            <p><a href="#">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

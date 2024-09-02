@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c0e1ac414c.js" crossorigin="anonymous"></script>
+    <script src="js/template.js" defer></script>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/hamburgerMenu.css">
+    <link rel="stylesheet" href="css/iconBagMenu.css">
+    <link rel="stylesheet" href="css/content.css">
+    <title>Computer Force | Register</title>
+    <script>
+        function validateRegistrationForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+
+            return true;
+        }
+
+        function clearRegistrationForm() {
+            document.forms['registrationForm'].reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="mobileMenuContainer">
+                <input type="checkbox" class="toggler" aria-label="Toggle mobile menu">
+                <div class="mobileButtonStyle hamburger perfectCenter"><div></div></div>
+                <div class="modal mobileMenu">
+                    <div class="search-container">
+                        <form>
+                            <input type="text" placeholder="Search" name="search">
+                            <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <a href="index.html">
+                <img id="logo" src="images/logo.png" alt="Company Logo">
+            </a>
+
+            <div class="mobileMenuContainer">
+                <input type="checkbox" class="toggler" aria-label="Toggle purchases menu">
+                <div class="mobileButtonStyle iconBag perfectCenter"></div>
+                <div class="modal mobileMenu">
+                    <h2 class="purchasesContainer">PURCHASES</h2>
+                    <table>
+                        <tr>
+                            <th>ITEM</th>
+                            <th>PRICE (AUD)</th>
+                        </tr>
+                        <tr>
+                            <td>Test Item 1</td>
+                            <td>$1,000</td>
+                        </tr>
+                        <tr>
+                            <td>Test Item 2</td>
+                            <td>$500</td>
+                        </tr>
+                        <tr class="total">
+                            <th>TOTAL</th>
+                            <th>$1,500</th>
+                        </tr>
+                    </table>
+                    <input type="submit" name="checkout" value="Go to Checkout" aria-label="Go to Checkout">
+                </div>
+            </div>
+        </header>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="searchDesktopContainer">
+                <form>
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+
+        <main>
+            <section> <br><br>
+                <h1 class="pageTitle centerText">Registration Form</h1>
+                <p class="centerText">Please complete the following form to register for an account on our website.</p>
+                <form class="registrationForm" name="registrationForm" action="processes/processRegisterCustomer.html" method="post" onsubmit="return validateRegistrationForm()">
+                    <div class="inputGroup">
+                        <label for="username">Username<sup>*</sup>:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="emailAddress">Email Address<sup>*</sup>:</label>
+                        <input type="email" id="emailAddress" name="emailAddress" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="password">Password<sup>*</sup>:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="confirmPassword">Confirm Password<sup>*</sup>:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="state">State<sup>*</sup>:</label>
+                        <select id="state" name="state" required>
+                            <option value="ACT">ACT</option>
+                            <option value="NSW">NSW</option>
+                            <option value="NT">NT</option>
+                            <option value="QLD">QLD</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="VIC">VIC</option>
+                            <option value="WA">WA</option>
+                        </select>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="phoneNumber">Phone Number<sup>*</sup>:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-actions">
+                        <input type="button" value="Clear" onclick="clearRegistrationForm()">
+                        <input type="submit" name="register" value="Register" aria-label="Register">
+                    </div>
+                </form>
+            </section>
+
+            <aside>
+                <h2 class="purchasesContainer">PURCHASES</h2>
+                <table>
+                    <tr>
+                        <th>ITEM</th>
+                        <th>PRICE (AUD)</th>
+                    </tr>
+                    <tr>
+                        <td>Test Item 1</td>
+                        <td>$1,000</td>
+                    </tr>
+                    <tr>
+                        <td>Test Item 2</td>
+                        <td>$500</td>
+                    </tr>
+                    <tr class="total">
+                        <th>TOTAL</th>
+                        <th>$1,500</th>
+                    </tr>
+                </table>
+                <input type="submit" name="checkout" value="Go to Checkout" aria-label="Go to Checkout">
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <p>2024 &copy; Patricia Souza @papatydesouza | All rights reserved</p>
+        <p><a href="">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

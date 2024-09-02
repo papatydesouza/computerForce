@@ -1,0 +1,77 @@
+ .iconBag{
+  background-image: url('../images/iconBag.png');
+  background-size: cover;
+}
+
+ .iconBag > div
+ {
+   position: relative;
+   width: 100%;
+   height: 2px;
+   background-color: var(--cfLightGrey);
+   transition: all 0.4s;
+ }
+ 
+ .iconBag > div::before, .iconBag > div::after
+ {
+   content: '';
+   position: absolute;
+   top: 10px;
+   width: 100%;
+   height: 2px;
+   background: inherit;
+ }
+ 
+ .iconBag > div::after
+ {
+   top: -10px;
+ }
+ 
+ .mobileMenu{background-color: var(--cfPink);}
+ 
+ .mobileMenu > ul > li
+ {
+   list-style: none;
+   color: var(--cfBlack);
+   font-size: 1.5rem;
+   padding: 1rem;
+ }
+ 
+ .mobileMenu > ul > li > a
+ {
+   color: inherit;
+   text-decoration: none;
+   transition: color 0.4s ease;
+ }
+ 
+ .toggler:checked{z-index: 5;}
+ 
+ .toggler:checked ~ .iconBag
+ {
+     z-index: 4;
+ }
+ 
+ .toggler:checked + .iconBag > div
+ {
+   transform: rotate(135deg);
+ }
+ 
+ .toggler:checked + .iconBag > div::before,
+ .toggler:checked + .iconBag > div::after
+ {
+   top: 0;
+   transform: rotate(90deg);
+ }
+ 
+ .toggler:checked:hover + .iconBag > div
+ {
+   transform: rotate(225deg);
+ }
+ 
+  Show menu 
+ .toggler:checked ~ .mobileMenu
+ {
+   visibility: visible;
+   opacity: 0.95;
+ }
+ 
